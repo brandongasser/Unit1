@@ -9,66 +9,33 @@ public class App {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
+        String black = "black";
+        String red = "red";
+        String green = "green";
+
         int chips = 100;
 
-        String betOneLocation;
-        int betOneAmount;
-        String betTwoLocation;
-        int betTwoAmount;
-        String betThreeLocation;
-        int betThreeAmount;
-        String betFourLocation;
-        int betFourAmount;
-        String betFiveLocation;
-        int betFiveAmount;
-        String betSixLocation;
-        int betSixAmount;
-        String betSevenLocation;
-        int betSevenAmount;
-        String betEightLocation;
-        int betEightAmount;
-        String betNineLocation;
-        int betNineAmount;
-        String betTenLocation;
-        int betTenAmount;
+        String colors[] = {green, red, black, red, black, red, black, red, black, red, black, black, red, black, red, black, red, black, red, red, black, red, black, red, black, red, black, red, black, black, red, black, red, black, red, black, red};
+        String betLocations[] = new String[10];
+        int betAmounts[] = new int[10];
 
-        for (int i = 10; i > 0; i--) {
-
-            int betAmount;
-            String betLocation;
-
+        for (int i = 0; i < 10; i++) {
             System.out.print("inside or outside?: ");
             String inOut = sc.nextLine();
             switch (inOut) {
                 case "inside":
                     System.out.print("what number?: ");
-                    betLocation = sc.nextLine();
-                    System.out.println("how much would you like to bet?: ");
-                    betAmount = sc.nextInt();
-                    switch (i) {
-                        case 10:
-
-                        case 9:
-
-                        case 8:
-
-                        case 7:
-
-                        case 6:
-
-                        case 5:
-                    }
+                    betLocations[i] = sc.nextLine();
                     break;
                 case "outside":
                     System.out.print("even, odd, black, or red?: ");
-                    betLocation = sc.nextLine();
-                    System.out.print("how much would you like to bet?: ");
-                    betAmount = sc.nextInt();
+                    betLocations[i] = sc.nextLine();
                     break;
                 default:
                     break;
             }
-
+            System.out.print("how much would you like to bet?: ");
+            betAmounts[i] = sc.nextInt();
         }
 
     }
